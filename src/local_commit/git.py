@@ -11,7 +11,7 @@ def run_git(*arguments : str) -> str:
         cwd = Path.cwd(),
         text=True,
         capture_output=True,
-        check=True
+        check=False
     )
 
     #returnCode property checks if the command worked ? if no returns 0 (exit code)
