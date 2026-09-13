@@ -1,0 +1,24 @@
+[project]
+name = "local-commit"
+version = "0.1.0"
+description = "Generate Git commit messages locally using Ollama"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27",
+    "pydantic>=2.0",
+    "rich>=13.0",
+    "typer>=0.12"
+]
+
+[project.scripts]
+ai-commit = "local_commit.cli:app"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-httpx>=0.30"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
