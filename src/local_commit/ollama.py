@@ -7,9 +7,9 @@ def generate_commit_message(
     prompt:str,
     model:str="llama3.2:latest",
     base_url:str="http://localhost:11434"
-) -> str:
+) -> str: 
     try:
-        response = httpx.post(
+        response = httpx.post( #response will be json ; contains commit message 
             f"{base_url}/api/generate",
             json={
                 "model":model,
@@ -40,8 +40,8 @@ def generate_commit_message(
 
 # testing this
 
-if __name__ == "__main__":
-    message = generate_commit_message(
-        "Add a function that reads the staged Git diff"
-    )
-    print(message)
+# if __name__ == "__main__":
+#     message = generate_commit_message(
+#         "Add a function that reads the staged Git diff"
+#     )
+#     print(message)
