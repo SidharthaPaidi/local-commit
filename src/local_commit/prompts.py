@@ -31,13 +31,6 @@ def build_commit_prompt(
     - Keep it concise: 8-18 words.
     - Output only the commit message.
 
-    Example:
-    Multiple changes:
-    config loading + CLI commit creation + Ollama options + prompt builder
-
-    Output:
-    feat(cli): add config loading, commit creation, Ollama options, and prompt builder
-
     Git diff:
 
     {diff}

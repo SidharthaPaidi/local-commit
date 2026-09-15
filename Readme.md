@@ -70,3 +70,8 @@ model = "llama3.2:latest"
 ollama_url = "http://localhost:11434"
 max_diff_chars = 12000
 ```
+
+## Result
+
+![image.png](image.png)
+
