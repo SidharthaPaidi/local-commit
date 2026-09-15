@@ -1,12 +1,11 @@
 import httpx
-
 class OllamaError(RuntimeError):
     """Raised when an Ollama command fails."""
     
 def generate_commit_message(
     prompt:str,
-    model:str="llama3.2:latest",
-    base_url:str="http://localhost:11434"
+    model: str = "llama3.2:latest",
+    base_url: str = "http://localhost:11434",
 ) -> str: 
     try:
         response = httpx.post( #response will be json ; contains commit message 

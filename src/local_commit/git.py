@@ -27,6 +27,9 @@ def get_status() -> str:
 def get_staged_diff() -> str:
     return run_git("diff","--cached") # same as line 25
 
+def create_commit(message: str) -> None:
+    run_git("commit","-m",message) # same as line 25
+
 
 # testing temporarily the function in this file
 # if __name__ == "__main__":
